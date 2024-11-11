@@ -1,0 +1,126 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+// Custom styles for the event details card
+*{
+  margin: 0;
+  padding: 0;
+}
+.card {
+  margin: 20px 0;
+  border-radius: 0.5rem;
+  border: 1px solid #e0e0e0;
+
+  &.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+}
+
+.card-header {
+  background-color: #007bff; // Bootstrap primary color
+  color: white;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-body {
+  font-family: 'Arial', sans-serif; // Use a clean font
+  line-height: 1.6; // Improve readability
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e0e0e0; // Add a subtle border
+  padding-top: 10px;
+}
+
+.btn {
+  transition: background-color 0.3s, color 0.3s; // Smooth transition for button hover effects
+
+  &:hover {
+    opacity: 0.8; // Slightly fade buttons on hover
+  }
+}
+
+// Optional: Add some responsive spacing
+@media (max-width: 768px) {
+  .card-footer {
+    flex-direction: column;
+    align-items: stretch;
+    button {
+      margin-bottom: 10px; // Space out buttons on smaller screens
+    }
+  }
+}
+.purple-bg {
+  background-color: #6f42c1;
+  color: white;
+}
+.custom-navbar {
+    background-color: #6f42c1;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: white;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(45deg,  #6f42c1,  #6f42c1); /* Gradient background */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-message {
+  margin-right: 15px;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.btn-logout {
+  background-color: #ff4d4d; /* Red color for logout button */
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-logout:hover {
+  background-color: #e43d3d; /* Darker red on hover */
+}

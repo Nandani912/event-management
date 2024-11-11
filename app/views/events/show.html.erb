@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header" style="background-color: #6f42c1; color: white;">
+      <h5>Event Details</h5>
+    </div>
+    <div class="card-body">
+      <p><strong>Event:</strong> <%= @event.name %></p>
+      <p><strong>Date:</strong> <%= @event.date %></p>
+      <p><strong>Location:</strong> <%= @event.location %></p>
+      <p><strong>Description:</strong> <%= @event.description %></p>
+      <%= link_to 'Edit', edit_event_path(@event), class: 'btn btn-warning btn-sm' %>
+      <%= button_to 'delete', @event ,method: :delete,class: 'btn btn-warning btn-sm' %>
+      <%= link_to 'Back', events_path, class: 'btn btn-secondary' %>
+
+    </div>
+  </div>
+</div>
